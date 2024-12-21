@@ -4,6 +4,7 @@ import { askContentGuide } from '../utils/askContentGuide';
 import { youtube_trending } from '../utils/youtube_trending';
 import styles from "./ContentGuide.module.css";
 
+
 const ContentGuide = () => {
   const [feedbackMessage, setFeedbackMessage] = useState('');
   const [feedback, setFeedback] = useState('');
@@ -33,7 +34,8 @@ const ContentGuide = () => {
               `### Video ${index + 1}\n**Title:** ${video.title}\n**Description:** ${video.description}\n[Watch Video](${video.videoUrl})\n`
           )
           .join('\n');
-      } else {
+      }
+       else {
         // Process non-YouTube-related feedback
         const resFeedback = await askContentGuide(feedbackMessage);
         initialResult = typeof resFeedback === 'string' ? resFeedback : JSON.stringify(resFeedback, null, 2);
@@ -57,7 +59,7 @@ const ContentGuide = () => {
     <div className={styles.container}>
   <div className={styles.heading}>
     {/* <h1>Unleash Your Content’s Potential with Helena</h1> */}
-      <img  src="../../public/LOGO.png" alt="LOGO" />
+      <img  src="./LOGO.png" alt="LOGO" link />
   </div>
 
   <form className={styles.form} onSubmit={handleSubmit}>
