@@ -1,0 +1,113 @@
+/* Full height container */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  width: 100%;
+  background-color: #f0f8ff;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent scrolling outside of output */
+}
+
+/* Fixed heading at the top */
+.heading {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  color: #333;
+  background-color: #08131c;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading img {
+  height: 230px; /* Adjust image size for better fit */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image is contained within the bounds */
+  margin-top: 20px;
+}
+
+/* Form layout with dynamic positioning */
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  /* max-width: 800px; */
+  height: max-content; /* Occupy full height */
+  padding-top: 70px; /* Space for the fixed heading */
+  box-sizing: border-box;
+}
+
+/* Output area */
+.output {
+  flex-grow: 1; /* Push bottom area down */
+  overflow-y: auto; /* Makes output scrollable when content exceeds */
+  margin: 20px 0; /* Space between output and bottom */
+  padding: 15px;
+  background-color: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  box-sizing: border-box;
+  max-height: calc(100vh - 130px);
+  width: 100%;
+  /* Restrict output height */
+}
+
+/* Bottom area for input and button */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  width: 100%;
+  max-width: 550px;
+  box-sizing: border-box;
+  position: fixed; /* Fix it to the bottom of the screen */
+  bottom: 0; /* Position it at the bottom */
+  z-index: 5; /* Ensure it stays on top of other content */
+}
+
+
+/* Input styling */
+.input {
+  flex-grow: 1; /* Take up available space */
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+.button {
+  flex-shrink: 0; /* Prevent shrinking */
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
