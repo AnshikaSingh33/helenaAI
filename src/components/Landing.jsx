@@ -13,7 +13,8 @@ const LandingPage = () => {
     <div>
       <section className="header">
         <nav>
-          <a href="#home">
+          <a href="/">
+           
             <img src="./LOGO.png" alt="logo" />
           </a>
           <div className={`nav-links ${menuOpen ? 'active' : ''}`} id="navLinks">
@@ -104,11 +105,7 @@ const LandingPage = () => {
           companion for discovering relevant, engaging, and inspiring content
           effortlessly.
         </p>
-        <div className="row">
-          <div className="comp-col">
-            <img src="#" alt="Technology Overview" />
-          </div>
-        </div>
+        
       </section>
     </div>
   );

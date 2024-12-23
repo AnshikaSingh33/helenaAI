@@ -1,18 +1,21 @@
-/* Full height container */
 .container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh; /* Full screen height */
+  height: 100vh;
   width: 100%;
   background-color: #f0f8ff;
+  background-image:url("./background.png") ;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden; /* Prevent scrolling outside of output */
+  overflow: hidden;
 }
 
-/* Fixed heading at the top */
 .heading {
   height: 60px;
   width: 100%;
@@ -29,85 +32,111 @@
 }
 
 .heading img {
-  height: 230px; /* Adjust image size for better fit */
-  width: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure the image is contained within the bounds */
+  height: 350px;
+  width: auto;
+  object-fit: contain;
   margin-top: 20px;
 }
 
-/* Form layout with dynamic positioning */
 .form {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  max-width: 500px;
-  /* max-width: 800px; */
-  height: max-content; /* Occupy full height */
-  padding-top: 70px; /* Space for the fixed heading */
+  max-width: 800px;
+  height: max-content;
+  padding-top: 70px;
   box-sizing: border-box;
 }
 
-/* Output area */
 .output {
-  flex-grow: 1; /* Push bottom area down */
-  overflow-y: auto; /* Makes output scrollable when content exceeds */
-  margin: 20px 0; /* Space between output and bottom */
+  flex-grow: 1;
+  overflow-y: auto;
+  margin: 20px 0;
   padding: 15px;
-  background-color: none;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  color: #333;
+  font-size: 1.3rem;
+  color:white;
   word-wrap: break-word;
   white-space: pre-wrap;
   box-sizing: border-box;
   max-height: calc(100vh - 130px);
   width: 100%;
-  /* Restrict output height */
 }
 
-/* Bottom area for input and button */
 .bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
   padding: 10px;
-  background-color: #f0f8ff;
+  background-color:none;
   width: 100%;
-  max-width: 550px;
+  max-width: 800px;
   box-sizing: border-box;
-  position: fixed; /* Fix it to the bottom of the screen */
-  bottom: 0; /* Position it at the bottom */
-  z-index: 5; /* Ensure it stays on top of other content */
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
 }
 
-
-/* Input styling */
 .input {
-  flex-grow: 1; /* Take up available space */
-  padding: 12px;
+  flex-grow: 1;
+  padding: 12px 15px;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  background-color: #f9f9f9;
   box-sizing: border-box;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* Button styling */
+.input:hover {
+  background-color: #f3f8fc;
+  border-color: #0a6ad0;
+}
+
+.input:focus {
+  background-color: #fff;
+  border-color: #0a6ad0;
+  box-shadow: 0 0 5px rgba(10, 106, 208, 0.5), inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.input:active {
+  border-color: #0057b8;
+  box-shadow: 0 0 4px rgba(0, 87, 184, 0.4), inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
 .button {
-  flex-shrink: 0; /* Prevent shrinking */
+  flex-shrink: 0;
   padding: 12px 20px;
-  background-color: #007bff;
+  background: linear-gradient(135deg, #0a6ad0, #59a9f6);
+  border: 1px solid #0057b8;
+  box-shadow: 0 8px 15px rgba(0, 87, 184, 0.4), 0 4px 6px rgba(0, 0, 0, 0.2);
   color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background: linear-gradient(135deg, #59a9f6, #0a6ad0);
+  box-shadow: 0 12px 20px rgba(0, 87, 184, 0.6), 0 6px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+  color: #f0faff;
+}
+
+.button:active {
+  background: linear-gradient(135deg, #0057b8, #0a6ad0);
+  box-shadow: 0 6px 12px rgba(0, 87, 184, 0.3), 0 3px 6px rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(88, 190, 255, 0.5);
 }
