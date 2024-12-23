@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./login.module.css";
+import styles from "./Login.module.css";
 import { Link } from "react-router-dom";
 function Login() {
   const [username, setUsername] = useState("");
@@ -72,9 +72,7 @@ function Login() {
         </div>
         <div className={styles.signupLink}>
           First time user?{" "}
-          <a href="/signup" className={styles.link}>
-            Sign up
-          </a>
+          <Link to='/SignUp' className={styles.link}>Sign up</Link>
         </div>
       </div>
     </div>

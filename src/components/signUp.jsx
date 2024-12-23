@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styles from "./signUp.module.css";
-
+import styles from "./SignUp.module.css";
+import { Link } from "react-router-dom";
 function SignUp() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -104,9 +104,10 @@ function SignUp() {
         </form>
         <div className={styles.loginLink}>
           Already have an account?{" "}
-          <a href="/login" className={styles.link}>
+          <Link to="/Login">Log in</Link>
+          {/* <a href="/login" className={styles.link}>
             Log in
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

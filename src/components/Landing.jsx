@@ -18,17 +18,17 @@ const Landing = () => {
       {/* Header Section */}
       <section className="header">
         <nav>
-          <a href="index.html">
-            <img src="LOGO.png" alt="logo" />
-          </a>
+         
+          <Link to="/Landing"><img src="LOGO.png" alt="logo" /></Link>
           <div className={`nav-links ${isMenuVisible ? "active" : ""}`} id="navLinks">
             <i className="fa fa-times" onClick={hideMenu}></i>
             <ul>
               <li>
-                <a href="">HOME</a>
+              <Link to="/Landing">HOME</Link>
               </li>
               <li>
-                <a href="/AboutUs">ABOUT</a>
+                
+                <Link to="/AboutUs">ABOUT</Link>
               </li>
               <li>
                 <Link to="/content-guide">HELENA</Link>
@@ -36,7 +36,7 @@ const Landing = () => {
               <li>
                 {/* <a href="/SignUP">SIGN UP</a> 
                 */}
-                <Link to="/SignUP">SIGN UP</Link>
+                <Link to="/SignUp">SIGN UP</Link>
               </li>
             </ul>
           </div>
