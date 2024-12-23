@@ -1,0 +1,104 @@
+.loginBody {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(242, 230, 240);
+    padding: 1rem;
+    overflow: hidden; /* Ensures no scrollbars on small screens */
+  }
+  
+  .inputForm {
+    display: flex;
+    background-color: #f3f3f3;
+    width: 90%;
+    max-width: 25rem;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    padding: 2rem;
+    color: black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .welcome {
+    font-size: 2.2em;
+    font-weight: 200;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: black;
+  }
+  
+  .msg {
+    font-size: 1.1em;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: black;
+  }
+  
+  .cred {
+    width: 100%;
+  }
+  
+  .label {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: black;
+  }
+  
+  .input {
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    outline-color: #86a8a3;
+    transition: border-color 0.3s; /* Smooth focus effect */
+  }
+  
+  .input:focus {
+    border-color: #86a8a3;
+  }
+  
+  .login {
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    margin-top: 1.5rem;
+    background-color: rgb(223, 233, 241);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .login:hover {
+    background-color: #d0e0e8;
+    transform: translateY(-2px); /* Subtle hover lift */
+  }
+  
+  .signupLink {
+    margin-top: 1.5rem;
+    font-size: 0.9em;
+    color: black;
+    text-align: center;
+  }
+  
+  .signupLink a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .signupLink a:hover {
+    /* color: black; */
+    text-decoration: underline;
+  }

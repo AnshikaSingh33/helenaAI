@@ -9,7 +9,7 @@ export const askContentGuide = async (QueryMessage) => {
   });
 
   const systemMessagePrompt = SystemMessagePromptTemplate.fromTemplate(
-    "Your name is Helena. You give advice based on content creation queries, providing three related trending examples to boost social media reach. Include trending hashtags and original content ideas. Provide detailed explanations and unique suggestions. Also consider previous query if it exists"
+    "Your name is Helena. You give advice based on content creation queries, providing three related trending examples to boost social media reach. Include trending hashtags and original content ideas. Provide detailed explanations and unique suggestions.If someone greets you firsts greet them back.Handle the prompts gracefully."
   );
 
   const humanMessagePrompt = HumanMessagePromptTemplate.fromTemplate("{asked_Query}");

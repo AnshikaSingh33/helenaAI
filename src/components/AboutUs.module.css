@@ -1,0 +1,195 @@
+/* Global Styles */
+.OuterContainer{
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+   /* Full-page gradient background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  overflow-x: hidden;
+}
+
+
+.about-container {
+  width: 100%;
+  max-width: 900px;  /* Reduced max-width for more compact design */
+  padding: 40px 20px; /* Reduced padding */
+  background: rgba(255, 255, 255, 0.9); /* Slight white background to separate sections from the gradient */
+  border-radius: 20px;  /* Even smaller border-radius */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  z-index: 2;
+  position: relative;
+  margin: auto;
+}
+
+.about-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15); /* Subtle hover effect */
+}
+
+.about-header {
+  text-align: center;
+  padding: 40px 20px;  /* Reduced padding */
+  background: linear-gradient(to right, #9b4dca, #9b6cd3);
+  border-radius: 20px 20px 0 0;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-header h1 {
+  margin: 0;
+  font-size: 3rem; /* Reduced font size for a more compact look */
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.about-header p {
+  font-size: 1.1rem;
+  margin-top: 8px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.about-section {
+  margin: 30px 0;
+  padding: 30px 20px;  /* Reduced padding for a more compact feel */
+  background: rgba(155, 77, 202, 0.06);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Hover effect for subtle elevation */
+}
+
+.about-section h2 {
+  font-size: 2.2rem; /* Reduced section header size */
+  color: #9b4dca;
+  margin-bottom: 12px;
+  position: relative;
+  font-weight: 500;
+}
+
+.about-section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 3px;
+  width: 60px;
+  background: #a54ed8;
+  border-radius: 10px;
+}
+
+.about-section p {
+  font-size: 1.1rem; /* Slightly smaller text for better flow */
+  line-height: 1.5;
+  color: #444;
+  font-weight: 400;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  margin: 18px 0;  /* Reduced spacing between items */
+  font-size: 1.1rem; /* Slightly smaller font size for feature items */
+  color: #444;
+  padding-left: 30px;
+  position: relative;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.features li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #9b4dca;
+  font-size: 1.3rem; /* Smaller checkmark size */
+}
+
+.about-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 30px;  /* Reduced padding for footer */
+  background: linear-gradient(to right, #9b4dca, #9b6cd3);
+  border-radius: 0 0 20px 20px;
+  color: #fff;
+  font-size: 1rem; /* Reduced footer text size */
+  font-weight: 400;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.about-footer:hover {
+  background: linear-gradient(to right, #9b4dca, #a54ed8); /* Hover effect for footer */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .about-header h1 {
+    font-size: 2.5rem; /* Adjust header font size for medium screens */
+  }
+
+  .about-header p {
+    font-size: 1rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.8rem; /* Reduced section header size */
+  }
+
+  .features li {
+    font-size: 1rem;
+  }
+
+  .about-footer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+    .OuterContainer {
+    background: linear-gradient(to bottom right, #f5e6f5, #c8aadf); /* Lighter gradient on small screens */
+  }
+
+  .about-container {
+    padding: 20px 15px; /* Less padding on mobile */
+  }
+
+  .about-header h1 {
+    font-size: 2rem; /* Smaller header on mobile */
+  }
+
+  .about-header p {
+    font-size: 0.95rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.6rem; /* Smaller section headers for mobile */
+  }
+
+  .features li {
+    font-size: 0.95rem; /* Adjust font size for mobile */
+  }
+
+  .about-footer {
+    font-size: 0.85rem;
+  }
+}
+.p-header{
+    color: black;
+}
