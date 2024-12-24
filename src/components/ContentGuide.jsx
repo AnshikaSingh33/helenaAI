@@ -75,7 +75,7 @@ const ContentGuide = () => {
       <div className={styles.heading}>
         {/* Link component for logo */}
         <Link to="/">
-          <img src="./LOGO.png" alt="LOGO" />
+          <img src="/LOGO.png" alt="LOGO" />
         </Link>
       </div>
       <form className={styles.form} onSubmit={handleSubmit}>
